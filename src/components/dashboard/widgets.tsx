@@ -128,14 +128,18 @@ export function RevenueTrend({ m }: { m: Metrics }) {
 
 export function IndustryDistribution({ m }: { m: Metrics }) {
   return (
-    <ResponsiveContainer width="100%" height={260}>
+    <div>
+    <ResponsiveContainer width="100%" height={220}>
       <PieChart>
         <Pie
           data={m.byIndustry}
           dataKey="value"
           nameKey="name"
+          cx="50%"
+          cy="50%"
           innerRadius={62}
           outerRadius={100}
+          isAnimationActive={false}
           paddingAngle={4}
           stroke="var(--color-background)"
         >
@@ -146,6 +150,18 @@ export function IndustryDistribution({ m }: { m: Metrics }) {
         <Tooltip {...tooltipStyle} formatter={(v) => inr(Number(v))} />
       </PieChart>
     </ResponsiveContainer>
+    <ul className="mt-3 space-y-1 text-xs">
+      {m.byIndustry.map((d, i) => (
+        <li key={d.name} className="flex items-center justify-between gap-2">
+          <span className="flex items-center gap-2 text-muted-foreground">
+            <span className="size-2 rounded-full" style={{ background: PALETTE[i % PALETTE.length] }} />
+            {d.name}
+          </span>
+          <span className="font-display text-foreground">{inrCompact(d.value)}</span>
+        </li>
+      ))}
+    </ul>
+    </div>
   );
 }
 
