@@ -48,9 +48,10 @@ export const getSheetData = createServerFn({ method: "GET" }).handler(async () =
     throw new Error(`Sheet request failed [${res.status}]: ${await res.text()}`);
   }
   const rows = parseCsv(await res.text());
-  if (rows.length === 0) return { rows: [] as SheetRow[], fetchedAt: Date.now() };
+  const headerRow = rows[0];
+  if (!headerRow) return { rows: [] as SheetRow[], fetchedAt: Date.now() };
 
-  const header = rows[0].map((h) => h.trim().toLowerCase());
+  const header = headerRow.map((h) => h.trim().toLowerCase());
   const idx = (...names: string[]) =>
     header.findIndex((h) => names.some((n) => h.includes(n)));
 
