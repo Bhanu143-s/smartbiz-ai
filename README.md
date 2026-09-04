@@ -85,3 +85,8 @@ Working prototype developed for the Razorpay Buildathon Open Track.
 
 <img width="1896" height="856" alt="image" src="https://github.com/user-attachments/assets/bc0b5106-607c-44de-90c4-821b9fc42eb8" />
 
+<img width="1845" height="860" alt="image" src="https://github.com/user-attachments/assets/64e0ebcb-473b-457f-83b9-9719c401c4c4" />
+<img width="1857" height="882" alt="image" src="https://github.com/user-attachments/assets/7fb5f62b-7cac-499a-b5df-71f87208266b" />
+<img width="1098" height="892" alt="image" src="https://github.com/user-attachments/assets/aa029f58-6dc3-4bc1-9bb1-0d88ac1f190a" />
+<img width="1898" height="858" alt="image" src="https://github.com/user-attachments/assets/d3498111-51f1-442c-bc25-311bd738af6a" />
+
