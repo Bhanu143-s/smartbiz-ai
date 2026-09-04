@@ -1,7 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 
 const CSV_URL =
-  "https://docs.google.com/spreadsheets/d/1Ss9swE4FTln5TtyU20rmcQlnGxLnJCmCpHJZ4zzXnNw/export?format=csv&gid=0";
+  "https://docs.google.com/spreadsheets/d/1CTCtV9ggCEp_JXSPd0k6Y9NZnGYWXB7raC5U9nN5_2c/export?format=csv&grid=0";
 
 export type SheetRow = {
   client: string;
