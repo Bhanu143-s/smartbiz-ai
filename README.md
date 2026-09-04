@@ -1,26 +1,84 @@
-# Aura Insights
+# SmartBiz AI
 
-I’d love for you to design a purple and black themed business dashboard that looks sleek and modern. The dashboard should show real-time analytics and KPIs by pulling data directly from my Google Sheets CSV link and it should automatically update whenever there are changes in the sheet (not just on load). The dashboard should display these key metrics from my sheet: * Client * Amount Paid (Revenue) * Industry * Gmail 👉 Please make sure that the 'Amount Paid' column is treated as Revenue, and all revenue values are displayed in Indian Rupees (₹). For the design, I’d like a futuristic look with neon purple accents, gradient backgrounds, glassmorphism effects, smooth animations, and interactive charts. It should include revenue trends, client insights, industry distribution, user engagement, conversion funnels, and performance indicators, all presented in a way that feels alive and dynamic. The layout should be responsive and allow me to customize and rearrange widgets easily. Please make it feel eye-catching, futuristic, and 'wow-worthy'—something that belongs in a high-tech control room. Here’s my Google Sheets CSV link for data integration: https://docs.google.com/spreadsheets/d/1tR_zrP98dy0mW2eN9-ZbamofdCvT76C30fgHkwu_MlY/export?format=csv&gid=0
+## AI-Powered Business Analytics & Data Management
 
-This project was built with [Lovable](https://lovable.dev).
+SmartBiz AI is an AI-powered business analytics and data management system that allows users to interact with business data through a natural-language Telegram assistant.
 
-**Live app**: https://flux-view-dashboard.lovable.app
+Instead of manually searching and updating spreadsheets, users can ask questions about their business data or request updates through Telegram. The system processes these requests using AI and connects them to Google Sheets, while the analytics dashboard provides a visual view of the business information.
 
-## Build with Lovable
+🚀 Live Demo
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/e5ea8482-7397-4ed3-85d9-86cbe2178cfd).
+Live Application: https://flux-view-dashboard.lovable.app
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+## Problem
 
-## Development
+Businesses often maintain client and payment information in spreadsheets. Finding information, calculating revenue, comparing clients, and updating records manually can be repetitive and time-consuming.
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## Solution
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+SmartBiz AI provides a conversational interface for business data management.
+
+Users can:
+
+* Ask questions about client and payment data
+* Check total revenue
+* Identify the highest-paying clients
+* Analyze client-wise and industry-wise data
+* Update client records using natural-language commands
+* View business information through an interactive analytics dashboard
+
+## System Architecture
+
+```text
+Telegram
+   ↓
+n8n Workflow
+   ↓
+Gemini AI Agent
+   ↓
+Google Sheets
+   ↓
+Analytics Dashboard
 ```
+
+## Core Components
+
+* **Telegram** — conversational user interface
+* **Gemini AI** — understands natural-language requests
+* **n8n** — workflow automation and integration
+* **Google Sheets** — central business data source
+* **Lovable** — interactive analytics dashboard
+
+## Data
+
+The prototype uses business records containing:
+
+* Client
+* Amount Paid
+* Email
+* Industry
+
+The demonstration uses synthetic data.
+
+## How It Works
+
+1. A user sends a natural-language request through Telegram.
+2. The AI agent interprets the user's intent.
+3. n8n processes the appropriate workflow.
+4. Google Sheets is queried or updated.
+5. The result is returned to the user.
+6. The dashboard visualizes the business data and analytics.
+
+## Key Value
+
+SmartBiz AI turns a traditional spreadsheet-based workflow into a conversational AI-powered system, reducing repetitive data operations and making business information easier to access and understand.
+
+## Demo
+
+The project demonstrates the complete flow:
+
+**User → Telegram → AI → Google Sheets → Analytics Dashboard**
+
+## Project Status
+
+Working prototype developed for the Razorpay Buildathon Open Track.
