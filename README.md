@@ -82,3 +82,6 @@ The project demonstrates the complete flow:
 ## Project Status
 
 Working prototype developed for the Razorpay Buildathon Open Track.
+
+<img width="1896" height="856" alt="image" src="https://github.com/user-attachments/assets/bc0b5106-607c-44de-90c4-821b9fc42eb8" />
+
